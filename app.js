@@ -18,5 +18,9 @@ app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/orders', orderRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the E-commerce App');
+  });
+  
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
